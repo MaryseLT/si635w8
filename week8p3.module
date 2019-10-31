@@ -2,11 +2,10 @@
 
 function week8p3_menu() {
     $items = array();
-    $items['week8'] = array(
+    $items['week8p3'] = array(
         'title' => 'week8p3',
         'page callback' => 'week8p3_hello',
-
-        'type' => MENU_CALLBACK // do not make a menu, just a callback
+        'access callback' => true,
     );
     return $items;
 }
