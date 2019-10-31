@@ -1,0 +1,19 @@
+<?php
+
+function week8p3_menu() {
+    $items = array();
+    $items['week8'] = array(
+        'title' => 'week8p3',
+        'page callback' => 'week8p3_hello',
+
+        'type' => MENU_CALLBACK // do not make a menu, just a callback
+    );
+    return $items;
+}
+
+
+function week8p3_hello() {
+    drupal_goto("node/25");
+    // drupal_goto takes the user to a different site; its a redirect
+    return t("Hooray you have arrived at Node 25! Congratulations!");
+}

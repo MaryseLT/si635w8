@@ -1,0 +1,30 @@
+<?php
+
+function week8p1_menu() {
+    $items = array();
+    $items['week8p'] = array(
+        'title' => 'week8 part 1',
+        'page callback' => 'week8p1_hello',
+//        'access callback' => 'user_access',
+//        'access arguments' => array('admin week8hmwkp1'),
+        'type' => MENU_CALLBACK // do not make a menu, just a callback
+    );
+    return $items;
+}
+
+//function week8p1_permission() { // setting up permissions
+//    return array(
+//        'admin week8hmwkp1' => array( // the key to this array == 'admin week8'
+////            below is what is displayed to user
+//            'title' => t('Week 8 Homework Part 1'),
+//            'description' => t('use week8hmwkp1'),
+//        ),
+//    );
+//}
+
+
+function week8p1_hello() {
+    drupal_set_message(t('An error occurred and processing did not complete.'), 'error');
+    // provides debug info to the user
+    return;
+}

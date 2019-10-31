@@ -1,0 +1,17 @@
+<?php
+
+function week8p2_menu() {
+    $items = array();
+    $items['week8'] = array(
+        'title' => 'week8',
+        'page callback' => 'week8p2_hello',
+        'type' => MENU_CALLBACK
+    );
+    return $items;
+}
+
+
+function week8p2_hello() {
+    return l(t(("Click here"), 'node/10')); // creating URL to an actual content page
+    // l() == creating a link
+}
