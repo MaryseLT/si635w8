@@ -2,16 +2,16 @@
 
 function week8p2_menu() {
     $items = array();
-    $items['week8'] = array(
-        'title' => 'week8',
+    $items['week8p2'] = array(
+        'title' => 'This Is SI 635 Week 8 Part 2 Homework!',
         'page callback' => 'week8p2_hello',
-        'type' => MENU_CALLBACK
+        'access callback' => true,
     );
     return $items;
 }
 
 
 function week8p2_hello() {
-    return l(t(("Click here"), 'node/10')); // creating URL to an actual content page
-    // l() == creating a link
+    drupal_set_message(t('Did it work?'));
+    return l(t("Click here to be rerouted"),'node/10');
 }
